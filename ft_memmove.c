@@ -21,6 +21,7 @@ void *ft_memmove(void *dst, const void *src, size_t len)
     {
         pdst[i] = temp[i];
         i--;    
-    }    
+    } 
+    free(temp);
     return (dst);
 }
