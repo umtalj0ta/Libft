@@ -9,7 +9,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
-	joinstring = malloc(sizeof(char)*((s1len + s2len) + 1));
+	if(!(joinstring = malloc(sizeof(char)*((s1len + s2len) + 1))))
+        return (NULL);
 	count = 0;
 	if(!s1 | !s2)
 		return NULL;
