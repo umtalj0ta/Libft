@@ -9,13 +9,12 @@ char    *ft_substr(const char *s, unsigned int start, size_t len)
     count = 0;
     if(!s)
         return (NULL);
-    while(count < len)
+    while(count < len && s[start + count] != '\0' && start < ft_strlen(s))
     {
-        substr[count] = s[start];
+        substr[count] = s[start + count];
         count++;
-        start++;
     }
-    substr[len] = '\0';
+    substr[count] = '\0';
     return(substr);    
 }
 

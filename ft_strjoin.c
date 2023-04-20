@@ -1,6 +1,6 @@
 #include "libft.h"
 
-char	*ft_join(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*joinstring;
 	int	s1len;
