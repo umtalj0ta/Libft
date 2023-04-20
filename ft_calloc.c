@@ -6,7 +6,7 @@
 /*   By: jgomes-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 13:13:28 by jgomes-v          #+#    #+#             */
-/*   Updated: 2023/04/17 13:14:37 by jgomes-v         ###   ########.fr       */
+/*   Updated: 2023/04/20 15:07:21 by jgomes-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
     
 	if (!(hold = malloc(size * nmemb)))
         return (NULL);
-	ft_bzero(hold, nmemb);
+	ft_bzero(hold, nmemb * size);
 	return (hold);
 }

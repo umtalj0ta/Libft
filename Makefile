@@ -6,7 +6,7 @@
 #    By: jgomes-v <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 12:12:41 by jgomes-v          #+#    #+#              #
-#    Updated: 2023/04/19 19:06:28 by jgomes-v         ###   ########.fr        #
+#    Updated: 2023/04/20 13:12:38 by jgomes-v         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,3 +33,7 @@ fclean: clean
 	rm -f $(NAME)
 
 re: clean all
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(FILES)
+	gcc -nostartfiles -shared -o libft.so $(OBJECTS)

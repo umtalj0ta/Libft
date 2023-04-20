@@ -6,7 +6,7 @@
 /*   By: jgomes-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 14:49:38 by jgomes-v          #+#    #+#             */
-/*   Updated: 2023/04/17 12:23:45 by jgomes-v         ###   ########.fr       */
+/*   Updated: 2023/04/20 15:18:46 by jgomes-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,33 @@
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strnstr(const char *haystack, const char *needle, int len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	int		i;
+	int		j;
 	int		lenght;
-	char	*small;
-	char	*big;
 
-	small = (char *)needle;
-	big = (char *) haystack;
+	lenght = (int) len;
 	i = 0;
-	lenght = ft_strlen(small);
-	if (*needle == '\0')
-		return ((char *)haystack);
-	while (big[i] != '\0' && (i + lenght) <= len)
+	if (needle[i] == '\0')
 	{
-		if (ft_strncmp((big + i), small, lenght) == 0)
+		return ((char *)haystack);
+	}
+	while (haystack[i] != '\0' && i < lenght)
+	{
+		j = 0;
+		while (needle[j] == haystack[i + j] && i + j < lenght)
 		{
-			return (big + i);
+			if (needle[j + 1] == '\0')
+			{
+				return ((char *) haystack + i);
+			}
+			j++;
 		}
-	i++;
+		i++;
 	}
 	return (NULL);
 }
-
 /*int main(void)
 {
      char haystack[40] = "olha um vez teste";

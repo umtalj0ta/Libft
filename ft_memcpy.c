@@ -6,7 +6,7 @@
 /*   By: jgomes-v <jgomes-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 12:41:21 by jgomes-v          #+#    #+#             */
-/*   Updated: 2023/04/17 15:22:11 by jgomes-v         ###   ########.fr       */
+/*   Updated: 2023/04/20 13:12:09 by jgomes-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	psrc = (char *)src;
 	pdest = (char *)dest;
 
-    if(dest == 0)
-        return (NULL);
+    	if(!dest && !src)
+        	return (0);
 	while (i < n)
 	{
 		pdest[i] = psrc[i];

@@ -6,7 +6,7 @@
 /*   By: jgomes-v <jgomes-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 12:07:24 by jgomes-v          #+#    #+#             */
-/*   Updated: 2023/04/17 13:09:19 by jgomes-v         ###   ########.fr       */
+/*   Updated: 2023/04/20 13:16:07 by jgomes-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	ps = (char *)s;
 	i = 0;
 	count = n;
-	while (i < count && ps[i] != '\0')
+	while (i < count)
 	{
 		if (ps[i] == (signed char)c)
 		{
