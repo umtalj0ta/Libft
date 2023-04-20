@@ -15,10 +15,9 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*hold;
-
-	if (!nmemb || !size)
-		return (NULL);
-	hold = malloc(size * nmemb);
+    
+	if (!(hold = malloc(size * nmemb)))
+        return (NULL);
 	ft_bzero(hold, nmemb);
 	return (hold);
 }

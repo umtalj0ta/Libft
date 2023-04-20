@@ -30,6 +30,6 @@ all: $(NAME)
 clean:
 	rm -f $(OBJECTS) $(NAME)
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: clean all

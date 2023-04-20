@@ -5,7 +5,8 @@ char    *ft_substr(const char *s, unsigned int start, size_t len)
     char    *substr;
     size_t  count;
 
-    substr = malloc(sizeof(char) * (len + 1));
+    if(!(substr = malloc(sizeof(char) * (len + 1))))
+        return (NULL);
     count = 0;
     if(!s)
         return (NULL);
