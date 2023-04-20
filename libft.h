@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgomes-v <jgomes-v@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jgomes-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 18:20:17 by jgomes-v          #+#    #+#             */
-/*   Updated: 2023/04/19 19:07:35 by jgomes-v         ###   ########.fr       */
+/*   Created: 2023/04/20 16:31:09 by jgomes-v          #+#    #+#             */
+/*   Updated: 2023/04/20 16:36:30 by jgomes-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	LIBFT_H
+#ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stdio.h>
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-size_t		ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isascii(int c);
@@ -48,4 +48,4 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
 void	ft_putchar_fd(char c, int fd);
-#endif
+#endif 
