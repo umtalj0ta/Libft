@@ -6,7 +6,7 @@
 /*   By: jgomes-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 18:25:51 by jgomes-v          #+#    #+#             */
-/*   Updated: 2023/04/20 18:29:28 by jgomes-v         ###   ########.fr       */
+/*   Updated: 2023/04/21 17:09:24 by jgomes-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	str = ft_strdup(s);
 	i = 0;
-	if(!str)
+	if (!str)
 		return (NULL);
 	while (str[i])
 	{

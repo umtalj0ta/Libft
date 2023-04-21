@@ -1,11 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jgomes-v <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/21 13:48:09 by jgomes-v          #+#    #+#             */
+/*   Updated: 2023/04/21 17:01:18 by jgomes-v         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 
-#include <stdlib.h>
-#include <stdio.h>
-
-int		len(long nb)
+static int	len(long nb)
 {
-	int		len;
+	int	len;
 
 	len = 0;
 	if (nb <= 0)
@@ -21,17 +30,8 @@ int		len(long nb)
 	return (len);
 }
 
-char	*ft_itoa(int nb)
+char	*morelines(long n, char *str, int i)
 {
-	char *str;
-	long	n;
-	int		i;
-
-	n = nb;
-	i = len(n);
-	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
-		return (NULL);
-	str[i--] = '\0';
 	if (n == 0)
 	{
 		str[0] = 48;
@@ -44,12 +44,26 @@ char	*ft_itoa(int nb)
 	}
 	while (n > 0)
 	{
-		str[i] = 48 + (n % 10);
+		str[i--] = 48 + (n % 10);
 		n = n / 10;
-		i--;
 	}
 	return (str);
 }
+
+char	*ft_itoa(int nb)
+{
+	char	*str;
+	long	n;
+	int		i;
+
+	n = nb;
+	i = len(n);
+	str = (char *)malloc(sizeof(char) * (i + 1));
+	if (!str)
+		return (NULL);
+	str[i--] = '\0';
+	return (morelines(n, str, i));
+}	
 
 /*int main(void)
 {

@@ -6,7 +6,7 @@
 /*   By: jgomes-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 16:31:09 by jgomes-v          #+#    #+#             */
-/*   Updated: 2023/04/20 18:06:58 by jgomes-v         ###   ########.fr       */
+/*   Updated: 2023/04/21 17:09:43 by jgomes-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
 void	ft_putchar_fd(char c, int fd);
-char    *ft_itoa(int n);
+char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	**ft_split(const char *s, char c);
 #endif 
