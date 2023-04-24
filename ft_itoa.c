@@ -6,7 +6,7 @@
 /*   By: jgomes-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 13:48:09 by jgomes-v          #+#    #+#             */
-/*   Updated: 2023/04/21 17:01:18 by jgomes-v         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:23:57 by jgomes-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	len(long nb)
 	return (len);
 }
 
-char	*morelines(long n, char *str, int i)
+static char	*morelines(long n, char *str, int i)
 {
 	if (n == 0)
 	{

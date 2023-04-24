@@ -6,13 +6,13 @@
 /*   By: jgomes-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:01:32 by jgomes-v          #+#    #+#             */
-/*   Updated: 2023/04/21 18:14:33 by jgomes-v         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:53:48 by jgomes-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count_words(const char *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int	i;
 	int	words;

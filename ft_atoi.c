@@ -6,13 +6,13 @@
 /*   By: jgomes-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 11:05:28 by jgomes-v          #+#    #+#             */
-/*   Updated: 2023/04/14 14:04:05 by jgomes-v         ###   ########.fr       */
+/*   Updated: 2023/04/24 16:01:07 by jgomes-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *npr)
 {
 	int	i;
 	int	sign;
@@ -21,19 +21,19 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	res = 0;
-	while (str[i] == ' ' || str[i] == '\t'
-		|| str[i] == '\n'
-		|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
+	while (npr[i] == ' ' || npr[i] == '\t'
+		|| npr[i] == '\n'
+		|| npr[i] == '\r' || npr[i] == '\v' || npr[i] == '\f')
 	i++;
-	if (str[i] == '\0')
+	if (npr[i] == '\0')
 		return (0);
-	if (str[i] == '-')
+	if (npr[i] == '-')
 		sign *= -1;
-	if (str[i] == '-' || str[i] == '+')
+	if (npr[i] == '-' || npr[i] == '+')
 		i++;
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	while (npr[i] && npr[i] >= '0' && npr[i] <= '9')
 	{
-		res = res * 10 + str[i] - '0';
+		res = res * 10 + npr[i] - '0';
 		i++;
 	}
 	return (res * sign);
