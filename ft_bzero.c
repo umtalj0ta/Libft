@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgomes-v <jgomes-v@student.42.fr>          +#+  +:+       +#+        */
+/*   By: achabrer <achabrer@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 13:09:34 by jgomes-v          #+#    #+#             */
-/*   Updated: 2023/04/17 16:08:08 by jgomes-v         ###   ########.fr       */
+/*   Updated: 2023/11/10 22:17:16 by achabrer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void	ft_bzero(void *s, size_t n)
 {
 	char buffer[10];
 	ft_bzero(buffer, 3);
-	printf("%s", buffer);
+	printf("%s\n", buffer);
 }*/	
